@@ -1,0 +1,14 @@
+{
+  "status": "200",
+  "statusMessage": "Successfully recovered data",
+  "id": 1345,
+  "course": "Testing",
+  "teacherName": "Cristiano Ronaldo",
+  "students": [
+    { "name": "Juan", "lastname": "Perez" },
+    { "name": "Roberto", "lastname": "Carlos" },
+    { "name": "Fulano", "lastname": "Detal" },
+    { "name": "Gian", "lastname": "Laic" },
+    { "name": "Fernando", "lastname": "Saavedra" }
+  ]
+}
