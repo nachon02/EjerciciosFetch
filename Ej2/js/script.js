@@ -11,8 +11,14 @@ const btnAddImage = document.getElementById("btnAddImage"); // "Traemos" utiliza
  * agrega esta imagen al div de id "container"
  */
 function addImage(imgURL) {
-  // En la siguiente línea se utilizan "backticks" para armar el String. Más info => https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Template_literals
-  container.innerHTML += `<img src="${imgURL}"/>`; // Se concatena cada imagen al innerHTML del contenedor
+    // En la siguiente línea se utilizan "backticks" para armar el String. Más info => https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Template_literals
+    container.innerHTML += `<img src="${imgURL}"/>`; // Se concatena cada imagen al innerHTML del contenedor
 }
 
 // Escribe el código necesario para añadir el evento click al botón que permita agregar perros al div de id "container"
+
+btnAddImage.addEventListener("click", function (e) {
+    fetch(DATA_URL)
+        .then((res) => res.json())
+        .then((data) => addImage(data.message));
+});
